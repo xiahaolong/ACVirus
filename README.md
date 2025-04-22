@@ -101,7 +101,7 @@ ACVirus draw --node_file output/finally_node.csv --edge_file output/finally_netw
 
 ##### Example Figure
 
-
+<img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250422201539626.png" alt="image-20250422201539626"  />
 
 ## Other function
 
@@ -120,7 +120,7 @@ export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 ```
 
-#### 📝 Parameters
+#### Parameters
 
 | Parameter         | Description                                                                 |
 |-------------------|-----------------------------------------------------------------------------|
