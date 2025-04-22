@@ -9,11 +9,11 @@
 </div>
 ---
 
+
 ## Introduction
 
 > Metagenomic sequencing has greatly accelerated the discovery of novel viruses without the need for cultivation. **ACVirus** enables accurate annotation of viral contigs based on genomic sequences, integrating them into the established ICTV taxonomy framework.
 
----
 
 
 
@@ -80,7 +80,7 @@ ACVirus classify --contig test.fa --data_path acvirus_db  --out output/
 
 ---
 
-## Visualizing the Viral Network
+#### Visualizing the Viral Network
 
 ACVirus provides two color-coding types for network diagrams:
 
