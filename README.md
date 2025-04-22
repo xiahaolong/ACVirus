@@ -39,7 +39,7 @@ tar -xzvf ACVirus.tar.gz
 To facilitate the streamlined execution of ACVirus, we recommend declaring its decompression path as an environment variable. This integration enables system-wide accessibility through terminal commands. For instance:
 
 ```shell
-export PATH="{your decompression path}/ACVirus:$PATH"  
+export PATH="{your decompression path}:$PATH"  
 ```
 
 #### **Extract the database**
