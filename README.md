@@ -123,7 +123,3 @@ ACVirus draw --node_file ~/output/finally_node.csv --edge_file ~/output/finally_
 ### 🧭 For more details, please refer to the [Documentation](https://github.com/xiahaolong/ACVirus/wiki)
 
 ---
-
-如果你还有 logo、截图、流程图等素材，可以考虑在开头加一张整体工作流程图（比如 `.png`），进一步提升 README 的可读性和专业感。
-
-需要我也可以帮你生成一个网络图流程图或者交互式 badge（比如安装状态、版本号等），想加的话告诉我就好。
