@@ -118,8 +118,5 @@ ACVirus draw --node_file ~/output/finally_node.csv --edge_file ~/output/finally_
 | `--top_n`            | Number of top taxa to highlight (default: 20)  |
 | `--taxa_color`       | Taxonomy level used for coloring (default: Family) |
 
----
 
-### 🧭 For more details, please refer to the [Documentation](https://github.com/xiahaolong/ACVirus/wiki)
 
----
