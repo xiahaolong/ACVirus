@@ -65,11 +65,11 @@ export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
 #### 📝 Parameters
 
-| Parameter      | Description                                                                 |
-|----------------|-----------------------------------------------------------------------------|
-| `--dbpath`     | Path to save the database                                                   |
-| `--vmr`        | Path to the ICTV VMR Excel file                                             |
-| `--restart`    | *(Optional)* If a small portion of the sequences fail to download, enable resume mode to skip the sequences that have already been downloaded.        |
+| Parameter         | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| `--dbpath`        | Path to save the database                                                   |
+| `--vmr`           | Path to the ICTV VMR Excel file                                             |
+| `--restart`       | *(Optional)* If a small portion of the sequences fail to download, enable resume mode to skip the sequences that have already been downloaded.        |
 
 ---
 
