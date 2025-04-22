@@ -46,7 +46,8 @@ We provide a ready-to-use database: `VMR_MSL40.v1.20250307.xlsx`.
 ```bash
 # Clone and extract the database
 git clone https://github.com/xiahaolong/ACVirus.git
-tar -xzvf acvirus_db.tar.gz
+sudo apt install p7zip-full  #Download and extract software
+7z x acvirus_db.7z
 ```
 
 You may also construct the database from scratch using the official ICTV VMR Excel file:
@@ -59,6 +60,7 @@ ACVirus create_db --vmr acvirus/VMR_MSL40.v1.20250307.xlsx --dbpath acvirus_db
 
 ```bash
 export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 ```
 
 #### 📝 Parameters
@@ -67,7 +69,7 @@ export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 |----------------|-----------------------------------------------------------------------------|
 | `--dbpath`     | Path to save the database                                                   |
 | `--vmr`        | Path to the ICTV VMR Excel file                                             |
-| `--restart`    | *(Optional)* Enable resume mode to skip already downloaded sequences        |
+| `--restart`    | *(Optional)* If a small portion of the sequences fail to download, enable resume mode to skip the sequences that have already been downloaded.        |
 
 ---
 
