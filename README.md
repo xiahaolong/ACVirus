@@ -1,84 +1,129 @@
+---
+
 <div align="center">
-  <h1>🦠 ACVirus</h1>
-  <h3>Genomic sequence-based annotation of viral contigs within established ICTV taxonomic hierarchies</h3>
+
+# 🦠 **ACVirus**
+
+### Genomic sequence-based annotation of viral contigs within established ICTV taxonomic hierarchies
+
+</div>
 
 ---
 
-### Software Introduction
-Without relying on cultivation, metagenomic sequencing greatly accelerated the novel virus detection. 
+## 📦 Introduction
+
+> Metagenomic sequencing has greatly accelerated the discovery of novel viruses without the need for cultivation. **ACVirus** enables accurate annotation of viral contigs based on genomic sequences, integrating them into the established ICTV taxonomy framework.
 
 ---
 
-### 安装指南
-#### 基础安装（Linux）
-用户需要安装prodigal、diamond作为软件的依赖，推荐使用conda进行安装
+## ⚙️ Installation Guide
+
+### 🔧 Prerequisites (Linux)
+
+Make sure `prodigal` and `diamond` are installed. We recommend using `conda`:
+
 ```bash
 conda install prodigal
 conda install diamond
 ```
-正确安装prodigal、diamond之后正式进入软件的安装流程
+
+### 📥 Software Setup
+
+Download the latest executable from the [GitHub Releases](https://github.com/xiahaolong/ACVirus/releases) page and add it to your system path:
+
 ```bash
-# 下载程序
-git clone https://github.com/xiahaolong/ACVirus.git
-# 添加到环境变量
 export PATH=~:$PATH
 ```
-#### 构建数据库
-我们提供了VMR_MSL40.v1.20250307.xlsx版本的数据库序列，解压后可构建数据库便可使用
+
+---
+
+## 🧬 Database Construction
+
+### 📚 Provided Database
+
+We provide a ready-to-use database: `VMR_MSL40.v1.20250307.xlsx`.
+
 ```bash
-解压数据库
+# Clone and extract the database
+git clone https://github.com/xiahaolong/ACVirus.git
 tar -xzvf acvirus_db.tar.gz
 ```
-自行构建数据库可以在https://ictv.global/vmr直接下载对应的数据库文件，直接构建即可
+
+You may also construct the database from scratch using the official ICTV VMR Excel file:
+
 ```bash
 ACVirus create_db --vmr acvirus/VMR_MSL40.v1.20250307.xlsx --dbpath acvirus_db
 ```
-如果出现所有序列都无法从ncbi下载的情况则需要输入以下两条命令
+
+#### 🔐 If you encounter NCBI download issues, try:
+
 ```bash
 export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 ```
-**参数说明**：
 
-| 参数 | 说明 |
-|------|------|
-| `--dbpath` | 数据库保存路径 |
-| `--vmr` | ICTV 提供的 VMR Excel 文件路径 |
-| `--restart` | （可选）是否启用断点续传模式（可能由于网络波动导致部分序列下载失败，该参数可以跳过已下载文件补齐序列） |
+#### 📝 Parameters
 
-### 快速使用
-#### 执行分类分析
+| Parameter      | Description                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| `--dbpath`     | Path to save the database                                                   |
+| `--vmr`        | Path to the ICTV VMR Excel file                                             |
+| `--restart`    | *(Optional)* Enable resume mode to skip already downloaded sequences        |
+
+---
+
+## 🚀 Quick Start
+
+### 🧪 Classify Contigs
+
 ```bash
 ACVirus classify --data_path acvirus_db --contig test.fa --out output/
 ```
-**参数说明**：
 
-| 参数 | 说明 |
-|------|------|
-| `--contigs` | 输入的 contig 序列文件（FASTA 格式） |
-| `--data_path` | 数据库路径（默认：`virus_db`） |
-| `--out` | 结果输出目录（默认：`result`） |
-#### 输出文件说明
+#### 📝 Parameters
 
-| 文件名                  | 描述             |
-| ----------------------- | ---------------- |
-| `finally_result.tsv`    | 分类结果汇总     |
-| `finally_network.csv`   | 网络图节点数据   |
-| `network_edges.csv`     | 网络图边数据     |
+| Parameter      | Description                                |
+|----------------|--------------------------------------------|
+| `--contigs`    | Input contig FASTA file                    |
+| `--data_path`  | Path to the virus database (default: `virus_db`) |
+| `--out`        | Output directory (default: `result`)       |
 
+---
 
-### 绘制网络图谱
-在指定目录生成两个pdf文件，其中一张是以上色的分类标准上色，另一张是以数据来源上色（test/database）
+## 📁 Output Files
+
+| Filename                 | Description              |
+|--------------------------|--------------------------|
+| `finally_result.tsv`     | Summary of classification results |
+| `finally_network.csv`    | Network node data        |
+| `network_edges.csv`      | Network edge data        |
+
+---
+
+## 🖼️ Visualizing the Viral Network
+
+ACVirus can generate two network diagrams:
+
+- Colored by **taxonomy** (e.g., Family)
+- Colored by **data source** (e.g., test/database)
+
 ```bash
 ACVirus draw --node_file ~/output/finally_node.csv --edge_file ~/output/finally_network.csv --out ~/output
 ```
-**可选参数**：
 
-| 参数 | 说明 |
-|------|------|
-| `--degree_threshold` | 最小连接度过滤阈值（默认：0） |
-| `--top_n` | 上色的分类数量（默认：20） |
-| `--taxa_color` | 用于上色的分类标准（默认：Family） |
+#### 📝 Optional Parameters
 
+| Parameter            | Description                                     |
+|----------------------|-------------------------------------------------|
+| `--degree_threshold` | Minimum node degree for filtering (default: 0)  |
+| `--top_n`            | Number of top taxa to highlight (default: 20)  |
+| `--taxa_color`       | Taxonomy level used for coloring (default: Family) |
 
+---
 
+### 🧭 For more details, please refer to the [Documentation](https://github.com/xiahaolong/ACVirus/wiki)
+
+---
+
+如果你还有 logo、截图、流程图等素材，可以考虑在开头加一张整体工作流程图（比如 `.png`），进一步提升 README 的可读性和专业感。
+
+需要我也可以帮你生成一个网络图流程图或者交互式 badge（比如安装状态、版本号等），想加的话告诉我就好。
