@@ -107,7 +107,7 @@ ACVirus draw --node_file output/finally_node.csv --edge_file output/finally_netw
 
 #### Build the ictv database
 
-You can construct the database from scratch using the official [ICTV VMR Excel file](ICTV VMR Excel file) in :
+You can construct the database from scratch using the official [ICTV VMR Excel file](https://ictv.global/vmr) in :
 
 ```bash
 ACVirus create_db --vmr VMR_MSL40.v1.20250307.xlsx --dbpath acvirus_db
