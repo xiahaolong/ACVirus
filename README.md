@@ -16,6 +16,9 @@
 
 ![image-20250423183932745](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423183932745.png)
 
+<img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423195044780.png" alt="image-20250423195044780" style="zoom: 50%;" />
+
+
 
 ## Installation Guide
 
