@@ -12,9 +12,9 @@
 
 ## Introduction
 
-> Metagenomic sequencing has greatly accelerated the discovery of novel viruses without the need for cultivation. **ACVirus** enables accurate annotation of viral contigs based on genomic sequences, integrating them into the established ICTV taxonomy framework.
+> Metagenomic sequencing has greatly accelerated the discovery of novel viruses without the need for cultivation. **ACVirus** enables accurate annotation of viral contigs based on genomic sequences, integrating them into the established ICTV taxonomy framework. The following is the pipeline of the **ACVirus**
 
-
+![image-20250423183932745](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423183932745.png)
 
 
 ## Installation Guide
@@ -72,11 +72,11 @@ ACVirus classify --contig test.fa --data_path acvirus_db  --out output/
 
 ##### Output Files
 
-| Filename              | Description                       |
-| --------------------- | --------------------------------- |
-| `finally_result.tsv`  | Summary of classification results |
-| `finally_network.csv` | Network node data                 |
-| `network_edges.csv`   | Network edge data                 |
+| Filename            | Description                       |
+| ------------------- | --------------------------------- |
+| `final_result.tsv`  | Summary of classification results |
+| `final_network.csv` | Network node data                 |
+| `network_edges.csv` | Network edge data                 |
 
 ---
 
@@ -84,11 +84,11 @@ ACVirus classify --contig test.fa --data_path acvirus_db  --out output/
 
 ACVirus provides two color-coding types for network diagrams:
 
-- Colored by **taxonomy** (e.g., Family)
 - Colored by **data source** (e.g., test/database)
+- Colored by **taxonomy** (e.g., Family)
 
 ```bash
-ACVirus draw --node_file output/finally_node.csv --edge_file output/finally_network.csv --out output
+ACVirus draw --node_file output/final_node.csv --edge_file output/final_network.csv --out output
 ```
 
 ##### Optional Parameters
@@ -102,6 +102,10 @@ ACVirus draw --node_file output/finally_node.csv --edge_file output/finally_netw
 ##### Example Figure
 
 <img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250422201539626.png" alt="image-20250422201539626"  />
+
+![image-20250423175705655](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423175705655.png)
+
+
 
 ## Other function
 
@@ -128,7 +132,14 @@ export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 | `--vmr`           | Path to the ICTV VMR Excel file                                             |
 | `--restart`       | *(Optional)* If a small portion of the sequences fail to download, enable resume mode to skip the sequences that have already been downloaded.        |
 
----
+## The comparison results with other softwares
 
+To validate the classification performance of the software tools, we first conducted benchmark testing using the [ICTV MSL39](https://ictv.global/sites/default/files/VMR/VMR_MSL39.v1_20240912.xlsx) dataset.
 
+<img src="C:\Users\广结善缘\AppData\Roaming\Typora\typora-user-images\image-20250423192425409.png" alt="image-20250423192425409" style="zoom:80%;" />
 
+Subsequently, to assess the classification performance under mutated viral conditions, we performed mutagenesis testing on the MSL39 dataset using the Mutation-Simulator (DOI:[10.1093/bioinformatics/btaa716](https://doi.org/10.1093/bioinformatics/btaa716)) software, evaluating the software's efficacy at mutation rates of 90% and 80%.
+
+![image-20250423193135347](C:\Users\广结善缘\AppData\Roaming\Typora\typora-user-images\image-20250423193135347.png)
+
+![image-20250423193204623](C:\Users\广结善缘\AppData\Roaming\Typora\typora-user-images\image-20250423193204623.png)
