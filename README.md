@@ -74,8 +74,8 @@ ACVirus classify --contig test.fa --data_path acvirus_db  --out output/
 
 | Filename              | Description                       |
 | --------------------- | --------------------------------- |
-| `finally_result.tsv`  | Summary of classification results |
-| `finally_network.csv` | Network node data                 |
+| `final_result.tsv`  | Summary of classification results |
+| `final_network.csv` | Network node data                 |
 | `network_edges.csv`   | Network edge data                 |
 
 ---
@@ -88,7 +88,7 @@ ACVirus provides two color-coding types for network diagrams:
 - Colored by **data source** (e.g., test/database)
 
 ```bash
-ACVirus draw --node_file output/finally_node.csv --edge_file output/finally_network.csv --out output
+ACVirus draw --node_file output/final_node.csv --edge_file output/final_network.csv --out output
 ```
 
 ##### Optional Parameters
