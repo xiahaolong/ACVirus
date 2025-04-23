@@ -139,10 +139,10 @@ export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
 To validate the classification performance of the software tools, we first conducted benchmark testing using the [ICTV MSL39](https://ictv.global/sites/default/files/VMR/VMR_MSL39.v1_20240912.xlsx) dataset.
 
-![image-20250423195501752](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423195501752.png)
+![image-20250423201625684](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423201625684.png)
 
 Subsequently, to assess the classification performance under mutated viral conditions, we performed mutagenesis testing on the MSL39 dataset using the Mutation-Simulator (DOI:[10.1093/bioinformatics/btaa716](https://doi.org/10.1093/bioinformatics/btaa716)) software, evaluating the software's efficacy at mutation rates of 90% and 80%.
 
-![image-20250423193135347](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423193135347.png)
+<img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423201849769.png" alt="image-20250423201849769" style="zoom: 80%;" />
 
-![image-20250423193204623](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423193204623.png)
+<img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423201918063.png" alt="image-20250423201918063" style="zoom:80%;" />
