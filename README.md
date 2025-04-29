@@ -104,11 +104,22 @@ ACVirus draw --node_file output/final_node.csv --edge_file output/final_network.
 
 ##### Example Figure
 
+![image-20250424092604276](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250424092604276.png)
+
+<center>Example figure 1a: The visualization of the network graph with [msl40](https://ictv.global/sites/default/files/VMR/VMR_MSL40.v1.20250307.xlsx) as the test set (color by <b>data source</b>)</center>
+
+![image-20250424092803591](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250424092803591.png)
+
+<center>Example figure 1b: The visualization of the network graph with [msl40](https://ictv.global/sites/default/files/VMR/VMR_MSL40.v1.20250307.xlsx) as the test set (color by <b>virus family</b>)</center>
+
 <img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250422201539626.png" alt="image-20250422201539626"  />
+
+<center>Example figure 2a: The visualization of the network graph with  5,000 bacteriophagesas the test set (color by <b>data source</b>)</center>
+
 
 ![image-20250423175705655](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423175705655.png)
 
-
+<center>Example figure 2b: The visualization of the network graph with  5,000 bacteriophagesas the test set (color by <b>virus family</b>)</center>
 
 ## Other function
 
@@ -139,10 +150,10 @@ export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
 To validate the classification performance of the software tools, we first conducted benchmark testing using the [ICTV MSL39](https://ictv.global/sites/default/files/VMR/VMR_MSL39.v1_20240912.xlsx) dataset.
 
-![image-20250423195501752](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423195501752.png)
+![image-20250423201625684](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423201625684.png)
 
 Subsequently, to assess the classification performance under mutated viral conditions, we performed mutagenesis testing on the MSL39 dataset using the Mutation-Simulator (DOI:[10.1093/bioinformatics/btaa716](https://doi.org/10.1093/bioinformatics/btaa716)) software, evaluating the software's efficacy at mutation rates of 90% and 80%.
 
-![image-20250423193135347](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423193135347.png)
+<img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423201849769.png" alt="image-20250423201849769" style="zoom: 80%;" />
 
-![image-20250423193204623](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423193204623.png)
+<img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423201918063.png" alt="image-20250423201918063" style="zoom:80%;" />
