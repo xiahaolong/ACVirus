@@ -35,7 +35,6 @@ conda install -c bioconda prodigal diamond
 Download the latest executable from the [GitHub Releases](https://github.com/xiahaolong/ACVirus/releases) page and add it to your system path:
 
 ```bash
-wget https://github.com/xiahaolong/ACVirus/releases/download/ACVirusv1.0/ACVirus.tar.gz
 tar -xzvf ACVirus.tar.gz
 ```
 
