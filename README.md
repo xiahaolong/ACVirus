@@ -16,7 +16,7 @@
 
 ![image-20250423183932745](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423183932745.png)
 
-<img src="https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423195044780.png" alt="image-20250423195044780" style="zoom: 50%;" />
+<img src="![project](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/project.png)" alt="image-20250423195044780" style="zoom: 50%;" />
 
 
 
@@ -24,10 +24,10 @@
 
 #### Dependency:
 
-Before installation, we need make sure `prodigal` and `diamond` are installed. We recommend using `conda` :
+Before installation, we need make sure `prodigal` , `diamond` , `mafft` ,  `trimal` , `iqtree` are installed. We recommend using `conda` :
 
 ```bash
-conda install -c bioconda prodigal diamond
+conda install -c bioconda prodigal diamond mafft trimal iqtree
 ```
 
 #### Software Setup
@@ -119,6 +119,30 @@ ACVirus draw --node_file output/final_node.csv --edge_file output/final_network.
 ![image-20250423175705655](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423175705655.png)
 
 <center>Example figure 2b: The visualization of the network graph with  5,000 bacteriophagesas the test set (color by <b>virus family</b>)</center>
+
+---
+
+#### Phylogenetic tree and Genome comparison
+
+Construct a phylogenetic tree, and draw a genome comparison diagram based on the order of the phylogenetic tree:
+
+```bash
+ACVirus tree --infile test.fasta --outdir outputfile
+```
+#####  Parameters
+
+| Parameter     | Description                                      |
+| ------------- | ------------------------------------------------ |
+| `--infile`    | Input contig FASTA file                          |
+| `--outdir`    | Output directory                                 |
+
+##### Example Figure
+
+![tree](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/tree.png)
+<center>Example figure 3a: Phylogenetic tree</center>
+
+![genome_comparison](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/genome_comparison.png)
+<center>Example figure 3b: Genome comparison diagram based on the order of the phylogenetic tree</center>
 
 ## Other function
 
