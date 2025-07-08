@@ -16,7 +16,7 @@
 
 ![image-20250423183932745](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/image-20250423183932745.png)
 
-![project](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/project.png)
+![](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/mermaid-diagram.png)
 
 
 
