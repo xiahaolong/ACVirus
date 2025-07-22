@@ -147,7 +147,7 @@ Construct a phylogenetic tree and draw a genome-comparison diagram following the
 ACVirus tree --infile test.fasta --outdir outputfile
 ```
 ```bash
-ACVirus treetree --family_id Aliceevansviridae --data_path acvirus_db --result_path result --contig test.fasta --outdir test_tree
+ACVirus tree --family_id Aliceevansviridae --data_path acvirus_db --result_path result --contig test.fasta --outdir test_tree
 ```
 #####  Parameters
 
@@ -155,6 +155,12 @@ ACVirus treetree --family_id Aliceevansviridae --data_path acvirus_db --result_p
 | ------------- | ------------------------------------------------ |
 | `--infile`    | Input contig FASTA file                          |
 | `--outdir`    | Output directory                                 |
+| `--family_id`    | Family ID to process (will use data from database)                                 |
+| `--data_path`    | Database path                                 |
+| `--result_path result`    | Result path for classification output                                 |
+| `--contig`    | Input contig FASTA file                                 |
+
+
 
 ##### Example Figure
 
