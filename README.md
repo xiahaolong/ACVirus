@@ -44,17 +44,32 @@ To facilitate the streamlined execution of ACVirus, we recommend declaring its d
 export PATH="{your decompression path}:$PATH"  
 ```
 
-#### **Extract the database**
-
-```
-git clone https://github.com/xiahaolong/ACVirus.git
-sudo apt install p7zip-full  #Download and extract software
-7z x acvirus_db.7z
-```
-
-
 
 ## Quick Start
+
+#### Build the ictv database
+
+You can construct the database from scratch using the official [ICTV VMR Excel file](https://ictv.global/vmr) in :
+
+```bash
+ACVirus create_db --vmr VMR_MSL40.v1.20250307.xlsx --dbpath acvirus_db
+```
+
+####  If you encounter NCBI download ssl issues, try:
+
+```bash
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+```
+
+#### Parameters
+
+| Parameter         | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| `--dbpath`        | Path to save the database                                                   |
+| `--vmr`           | Path to the ICTV VMR Excel file                                             |
+| `--restart`       | *(Optional)* If a small portion of the sequences fail to download, enable resume mode to skip the sequences that have already been downloaded.        |
+
 
 #### Classify Contigs
 
@@ -149,30 +164,6 @@ ACVirus treetree --family_id Aliceevansviridae --data_path acvirus_db --result_p
 ![genome_comparison](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/Aliceevansviridae-2.png)
 <center>Example figure 3b: Genome comparison diagram based on the order of the phylogenetic tree</center>
 
-## Other function
-
-#### Build the ictv database
-
-You can construct the database from scratch using the official [ICTV VMR Excel file](https://ictv.global/vmr) in :
-
-```bash
-ACVirus create_db --vmr VMR_MSL40.v1.20250307.xlsx --dbpath acvirus_db
-```
-
-####  If you encounter NCBI download ssl issues, try:
-
-```bash
-export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
-```
-
-#### Parameters
-
-| Parameter         | Description                                                                 |
-|-------------------|-----------------------------------------------------------------------------|
-| `--dbpath`        | Path to save the database                                                   |
-| `--vmr`           | Path to the ICTV VMR Excel file                                             |
-| `--restart`       | *(Optional)* If a small portion of the sequences fail to download, enable resume mode to skip the sequences that have already been downloaded.        |
 
 ## The comparison results with other softwares
 
