@@ -24,10 +24,10 @@
 
 #### Dependency:
 
-Before installation, we need make sure `prodigal` , `diamond` , `mafft` ,  `trimal` , `iqtree` are installed. We recommend using `conda` :
+Before installation, we need make sure `prodigal` , `diamond` , `mafft` ,  `trimal` , `iqtree` , `seqkit` are installed. We recommend using `conda` :
 
 ```bash
-conda install -c bioconda prodigal diamond mafft trimal iqtree
+conda install -c bioconda prodigal diamond mafft trimal iqtree seqkit
 ```
 
 #### Software Setup
