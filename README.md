@@ -105,7 +105,7 @@ ACVirus provides two color-coding types for network diagrams:
 - Colored by **taxonomy** (e.g., Family)
 
 ```bash
-ACVirus draw --node_file output/final_node.csv --edge_file output/final_network.csv --out output
+ACVirus draw --node_file result/final_node.csv --edge_file result/final_network.csv --out result
 ```
 
 ##### Optional Parameters
@@ -166,8 +166,7 @@ ACVirus tree --family_id Aliceevansviridae --data_path acvirus_db --result_path 
 
 ![tree](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/Aliceevansviridae-2-tree.png)
 <center>Example figure 3a: Phylogenetic tree</center>
-
-![genome_comparison](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/Aliceevansviridae-2.png)
+![genome_comparison](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/Aliceevansviridae-2-ai.png)
 <center>Example figure 3b: Genome comparison diagram based on the order of the phylogenetic tree</center>
 
 
