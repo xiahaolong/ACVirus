@@ -142,7 +142,7 @@ ACVirus draw --node_file result/final_node.csv --edge_file result/final_network.
 Construct a phylogenetic tree and draw a genome-comparison diagram following the tree’s branching order. We provide two approaches:
 
 - build the tree directly from the prepared genome sequences
-- first run the **classify** step, then focus only on the clades of interest when constructing the tree
+- first run the **classify** step, then focus only on the taxonomy of interest when constructing the tree
 ```bash
 ACVirus tree --infile test.fasta --outdir outputfile
 ```
