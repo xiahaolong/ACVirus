@@ -61,7 +61,7 @@ sudo apt install p7zip-full  #Download and extract software
 The ACvirus is friendly to use. It requires input as fasta format and will return the Summary of classification results  with the identified virus sequences. 
 
 ```bash
-ACVirus classify --contig test.fa --data_path acvirus_db  --out output/
+ACVirus classify --contig test.fa --data_path acvirus_db  --out result/
 ```
 
 #####  Parameters
@@ -124,10 +124,15 @@ ACVirus draw --node_file output/final_node.csv --edge_file output/final_network.
 
 #### Phylogenetic tree and Genome comparison
 
-Construct a phylogenetic tree, and draw a genome comparison diagram based on the order of the phylogenetic tree:
+Construct a phylogenetic tree and draw a genome-comparison diagram following the tree’s branching order. We provide two approaches:
 
+- build the tree directly from the prepared genome sequences
+- first run the **classify** step, then focus only on the clades of interest when constructing the tree
 ```bash
 ACVirus tree --infile test.fasta --outdir outputfile
+```
+```bash
+ACVirus treetree --family_id Aliceevansviridae --data_path acvirus_db --result_path result --contig test.fasta --outdir test_tree
 ```
 #####  Parameters
 
@@ -138,10 +143,10 @@ ACVirus tree --infile test.fasta --outdir outputfile
 
 ##### Example Figure
 
-![tree](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/tree.png)
+![tree](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/Aliceevansviridae-2-tree.png)
 <center>Example figure 3a: Phylogenetic tree</center>
 
-![genome_comparison](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/genome_comparison.png)
+![genome_comparison](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/Aliceevansviridae-2.png)
 <center>Example figure 3b: Genome comparison diagram based on the order of the phylogenetic tree</center>
 
 ## Other function
