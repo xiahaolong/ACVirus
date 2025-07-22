@@ -168,6 +168,7 @@ ACVirus tree --family_id Aliceevansviridae --data_path acvirus_db --result_path 
 <center>Example figure 3a: Phylogenetic tree</center>
 
 ![genome_comparison](https://wenguang.oss-cn-hangzhou.aliyuncs.com/figure/Aliceevansviridae-2-ai.png)
+If the image does not display properly, please refer to the file genome_comparison_Aliceevansviridae.png provided in the repository.
 <center>Example figure 3b: Genome comparison diagram based on the order of the phylogenetic tree</center>
 
 
