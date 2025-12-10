@@ -93,7 +93,7 @@ ACVirus classify --contig test.fa --data_path acvirus_db  --out result/
 
 | Filename            | Description                       |
 | ------------------- | --------------------------------- |
-| `final_result.tsv`  | Summary of classification results |
+| `final_result_with_confidence.tsv`  | Summary of classification results |
 | `final_network.csv` | Network edge data                 |
 | `final_node.csv` | Network node data                 |
 
